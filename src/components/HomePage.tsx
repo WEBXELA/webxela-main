@@ -162,8 +162,8 @@ function HomePage() {
 
   const stats = [
     {
-      number: "50+",
-      label: "Happy Clients",
+      number: "10+",
+      label: "Build Products",
       icon: Users,
       description: "Satisfied customers worldwide"
     },
@@ -174,10 +174,10 @@ function HomePage() {
       description: "Successful implementations"
     },
     {
-      number: "15+",
-      label: "Team Members",
+      number: "25+",
+      label: "Certifications",
       icon: Building2,
-      description: "Expert developers & designers"
+      description: "Expert Cloud & DevOps Engineers"
     }
   ];
 
@@ -193,8 +193,7 @@ function HomePage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white overflow-hidden">
-      {/* Hero Section */}
+    <div className="min-h-screen bg-white">
       <section className="pt-32 pb-20 px-4 gradient-bg">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -224,18 +223,127 @@ function HomePage() {
               animate={{ opacity: 1 }}
               className="flex flex-col sm:flex-row justify-center gap-4"
             >
-              <button className="bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition flex items-center justify-center gap-2 group">
+              <Link to="/solutions" className="bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition flex items-center justify-center gap-2 group">
                 Our Solutions
                 <ChevronRight className="group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button className="gradient-border px-8 py-4 text-gray-700 hover:text-[#2A2AE1] transition flex items-center justify-center gap-2">
+              </Link>
+              <a 
+                href="https://calendly.com/webxela/demo" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="gradient-border px-8 py-4 text-gray-700 hover:text-[#2A2AE1] transition flex items-center justify-center gap-2"
+              >
                 Book a demo
                 <ChevronRight />
-              </button>
+              </a>
             </motion.div>
           </motion.div>
         </div>
       </section>
+
+      {/* Partners Section */}
+      <section className="py-32 relative overflow-hidden bg-white">
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-20"
+          >
+            <h2 className="text-5xl font-bold mb-6">
+              Our Strategic{' '}
+              <span className="gradient-text">Partners</span>
+            </h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Microsoft Partnership */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              className="partner-card rounded-2xl"
+            >
+              <div className="p-12 flex items-center justify-center">
+                <img
+                  src="https://raw.githubusercontent.com/WEBXELA/brand-images/fa88f831f4cca553e65123e2ebf2980daec2898c/partners/microsoft-for-startups-webxela.svg"
+                  alt="Microsoft for Startups"
+                  className="h-20 partner-logo"
+                />
+              </div>
+            </motion.div>
+
+            {/* AWS Partnership */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              className="partner-card rounded-2xl"
+            >
+              <div className="p-12 flex items-center justify-center">
+                <img
+                  src="https://raw.githubusercontent.com/WEBXELA/brand-images/752663304424cb4bde4f5a1138d4bb1dc936b787/partners/aws-activate-webxela.svg"
+                  alt="AWS Activate"
+                  className="h-20 partner-logo"
+                />
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+       {/* Cloud Providers Section */}
+       <section className="py-32 relative overflow-hidden bg-gradient-to-b from-white to-gray-50">
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-20"
+          >
+            <h2 className="text-5xl font-bold mb-6">
+              Trusted by Industry Leaders for{' '}
+              <span className="gradient-text">Cloud Excellence</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Delivering enterprise-grade cloud solutions with proven expertise across major platforms
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            {cloudProviders.map((provider, index) => (
+              <motion.div
+                key={provider.name}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                className="enhanced-border bg-white rounded-2xl overflow-hidden"
+              >
+                <div className="p-8">
+                  <div className="h-12 flex items-center mb-6">
+                    <img
+                      src={provider.logo}
+                      alt={provider.name}
+                      className="h-full object-contain"
+                    />
+                  </div>
+                  <div className="space-y-4">
+                    <p className="text-gray-600 leading-relaxed">
+                      {provider.description}
+                    </p>
+                    <div className="flex items-center gap-2 text-sm font-semibold text-gray-900">
+                      <Cloud className="h-4 w-4" />
+                      {provider.projects}
+                    </div>
+                  </div>
+                </div>
+                <div className="h-2" style={{ background: provider.color }} />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
 
       {/* Solutions Section */}
       <section className="py-32 bg-gray-50 relative overflow-hidden">
@@ -333,108 +441,8 @@ function HomePage() {
         />
       </section>
 
-      {/* Cloud Providers Section */}
-      <section className="py-32 relative overflow-hidden bg-gradient-to-b from-white to-gray-50">
-        <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-20"
-          >
-            <h2 className="text-5xl font-bold mb-6">
-              Trusted by Industry Leaders for{' '}
-              <span className="gradient-text">Cloud Excellence</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Delivering enterprise-grade cloud solutions with proven expertise across major platforms
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {cloudProviders.map((provider, index) => (
-              <motion.div
-                key={provider.name}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="enhanced-border bg-white rounded-2xl overflow-hidden"
-              >
-                <div className="p-8">
-                  <div className="h-12 flex items-center mb-6">
-                    <img
-                      src={provider.logo}
-                      alt={provider.name}
-                      className="h-full object-contain"
-                    />
-                  </div>
-                  <div className="space-y-4">
-                    <p className="text-gray-600 leading-relaxed">
-                      {provider.description}
-                    </p>
-                    <div className="flex items-center gap-2 text-sm font-semibold text-gray-900">
-                      <Cloud className="h-4 w-4" />
-                      {provider.projects}
-                    </div>
-                  </div>
-                </div>
-                <div className="h-2" style={{ background: provider.color }} />
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Partners Section */}
-      <section className="py-32 relative overflow-hidden bg-white">
-        <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-20"
-          >
-            <h2 className="text-5xl font-bold mb-6">
-              Our Strategic{' '}
-              <span className="gradient-text">Partners</span>
-            </h2>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Microsoft Partnership */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.8 }}
-              className="partner-card rounded-2xl"
-            >
-              <div className="p-12 flex items-center justify-center">
-                <img
-                  src="https://raw.githubusercontent.com/WEBXELA/brand-images/fa88f831f4cca553e65123e2ebf2980daec2898c/partners/microsoft-for-startups-webxela.svg"
-                  alt="Microsoft for Startups"
-                  className="h-20 partner-logo"
-                />
-              </div>
-            </motion.div>
-
-            {/* AWS Partnership */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.8 }}
-              className="partner-card rounded-2xl"
-            >
-              <div className="p-12 flex items-center justify-center">
-                <img
-                  src="https://raw.githubusercontent.com/WEBXELA/brand-images/752663304424cb4bde4f5a1138d4bb1dc936b787/partners/aws-activate-webxela.svg"
-                  alt="AWS Activate"
-                  className="h-20 partner-logo"
-                />
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+     
+      
 
       {/* Developer Community Section */}
       <section className="py-32 bg-gray-50 relative overflow-hidden">
@@ -584,7 +592,7 @@ function HomePage() {
                   <p className="text-2xl md:text-3xl font-light leading-relaxed mb-8">
                     "{testimonials[currentTestimonial].quote}"
                   </p>
-                  <div className="flex items-center">
+                  {/* <div className="flex items-center">
                     <img
                       src={testimonials[currentTestimonial].image}
                       alt={testimonials[currentTestimonial].author}
@@ -598,7 +606,7 @@ function HomePage() {
                         {testimonials[currentTestimonial].position} at {testimonials[currentTestimonial].company}
                       </p>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </motion.div>
             </AnimatePresence>

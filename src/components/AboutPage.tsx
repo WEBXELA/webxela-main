@@ -13,11 +13,12 @@ import {
   ArrowRight,
   ChevronRight
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const AboutPage = () => {
   const stats = [
-    { number: "15+", label: "Years Experience", icon: Award, color: "#6366F1" },
-    { number: "500+", label: "Global Clients", icon: Globe2, color: "#8B5CF6" },
+    { number: "25+", label: "Team Certifications", icon: Award, color: "#6366F1" },
+    { number: "100+", label: "Global Clients", icon: Globe2, color: "#8B5CF6" },
     { number: "98%", label: "Client Satisfaction", icon: Heart, color: "#EC4899" },
     { number: "24/7", label: "Support Available", icon: Users, color: "#10B981" },
   ];
@@ -58,7 +59,7 @@ const AboutPage = () => {
     },
     {
       title: "Global Reach",
-      description: "Serving clients across 25+ countries",
+      description: "Serving clients globally",
       icon: Globe2,
       color: "#8B5CF6"
     },
@@ -177,16 +178,11 @@ const AboutPage = () => {
             >
               <h2 className="text-4xl font-bold mb-6">Our Story</h2>
               <p className="text-gray-600 mb-6 text-lg leading-relaxed">
-                Founded in 2009, WEBXELA emerged from a simple yet powerful vision: to make 
-                cutting-edge technology accessible to businesses of all sizes. What started 
-                as a small team of passionate developers has grown into a global technology 
-                powerhouse, serving clients across 25+ countries.
+              At WEBXELA, we’re more committed than ever to helping founders turn bold ideas into scalable solutions. Whether you’re building your first MVP or growing fast, our team is here to support you with smart cloud architecture, AI tools, and reliable tech expertise.
+
               </p>
               <p className="text-gray-600 mb-6 text-lg leading-relaxed">
-                Our journey has been defined by continuous innovation, unwavering commitment 
-                to excellence, and a deep understanding of our clients' needs. We've evolved 
-                from a cloud solutions provider to a comprehensive technology partner, 
-                leading the charge in AI, machine learning, and digital transformation.
+              From product development to launch and beyond, we simplify complex technology so you can focus on what matters most: building, testing, and scaling your startup. Think of WEBXELA not just as a vendor—but your technology partner from day one.
               </p>
               <div className="space-y-4">
                 {achievements.map((achievement, index) => (
@@ -219,7 +215,7 @@ const AboutPage = () => {
             >
               <div className="solution-card overflow-hidden h-full">
                 <img
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800"
+                  src="https://raw.githubusercontent.com/WEBXELA/brand-images/2b082d397896624e06bd9a001c02d68138511846/logo/WEBXELA.svg"
                   alt="Team collaboration"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
@@ -300,22 +296,22 @@ const AboutPage = () => {
                 looking to transform your business or join our team, we'd love to hear from you.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                <Link
+                  to="/contact"
                   className="bg-white text-[#2A2AE1] px-8 py-4 rounded-full hover:bg-gray-100 transition flex items-center justify-center gap-2 group"
                 >
                   Partner With Us
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                </Link>
+                <a
+                  href="https://careers.webxela.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full hover:bg-white/10 transition flex items-center justify-center gap-2 group"
                 >
                   View Careers
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </motion.button>
+                </a>
               </div>
             </div>
           </motion.div>

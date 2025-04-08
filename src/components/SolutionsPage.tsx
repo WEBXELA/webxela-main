@@ -200,13 +200,21 @@ const SolutionsPage = () => {
               transition={{ delay: 0.3 }}
               className="flex flex-col sm:flex-row justify-center gap-4"
             >
-              <button className="bg-[#2A2AE1] text-white px-8 py-4 rounded-full hover:bg-[#2424B8] transition flex items-center justify-center gap-2 group">
-                Explore Solutions
+              <Link
+                to="/contact"
+                className="bg-[#2A2AE1] text-white px-8 py-4 rounded-full hover:bg-[#2424B8] transition flex items-center justify-center gap-2 group"
+              >
+                Start Building
                 <ChevronRight className="group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button className="bg-white text-[#2A2AE1] px-8 py-4 rounded-full hover:bg-gray-50 transition border-2 border-[#2A2AE1]">
-                Schedule Demo
-              </button>
+              </Link>
+              <a
+                href="https://calendly.com/webxela/demo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-[#2A2AE1] px-8 py-4 rounded-full hover:bg-gray-50 transition border-2 border-[#2A2AE1]"
+              >
+                Book a Demo
+              </a>
             </motion.div>
           </motion.div>
         </div>

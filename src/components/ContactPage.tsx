@@ -32,8 +32,8 @@ const ContactPage = () => {
       icon: Phone,
       title: "Call Us",
       details: [
-        "+1 (555) 123-4567",
-        "+44 20 7123 4567",
+        "+91 9724823602",
+
       ],
       color: "#6366F1",
     },
@@ -41,8 +41,7 @@ const ContactPage = () => {
       icon: Mail,
       title: "Email Us",
       details: [
-        "hello@webxela.com",
-        "support@webxela.com",
+        "info@webxela.com",
       ],
       color: "#8B5CF6",
     },
@@ -50,8 +49,7 @@ const ContactPage = () => {
       icon: Clock,
       title: "Working Hours",
       details: [
-        "Monday - Friday: 9AM - 6PM",
-        "Weekend: By Appointment",
+        "Available 24/7",
       ],
       color: "#EC4899",
     },
@@ -226,14 +224,14 @@ const ContactPage = () => {
                   <Globe2 className="w-6 h-6 text-[#0062F7]" />
                   <div>
                     <h3 className="font-semibold">Global Reach</h3>
-                    <p className="text-gray-600">Serving clients in 25+ countries</p>
+                    <p className="text-gray-600">Serving clients globally</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
                   <Building2 className="w-6 h-6 text-[#0062F7]" />
                   <div>
                     <h3 className="font-semibold">Enterprise Solutions</h3>
-                    <p className="text-gray-600">Trusted by Fortune 500 companies</p>
+                    <p className="text-gray-600">Trusted by AWS Activate & Microsoft for Startups</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">

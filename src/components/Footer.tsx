@@ -5,10 +5,6 @@ import {
   Mail,
   MapPin,
   Linkedin,
-  Twitter,
-  Facebook,
-  Instagram,
-  Youtube,
   ArrowRight
 } from 'lucide-react';
 import { supabase } from '../lib/supabase';
@@ -136,10 +132,15 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <Link to="/blog" className="text-gray-300 hover:text-white transition flex items-center gap-2 group">
+                <a 
+                  href="https://calendly.com/webxela/demo" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-white transition flex items-center gap-2 group"
+                >
                   <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-all -ml-6 group-hover:ml-0" />
                   Book a Demo
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
@@ -234,38 +235,6 @@ const Footer = () => {
                   className="bg-white/10 p-2 rounded-full hover:bg-[#2A2AE1] transition"
                 >
                   <Linkedin className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://twitter.com/webxela"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-white/10 p-2 rounded-full hover:bg-[#2A2AE1] transition"
-                >
-                  <Twitter className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://facebook.com/webxela"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-white/10 p-2 rounded-full hover:bg-[#2A2AE1] transition"
-                >
-                  <Facebook className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://instagram.com/webxela"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-white/10 p-2 rounded-full hover:bg-[#2A2AE1] transition"
-                >
-                  <Instagram className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://youtube.com/webxela"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-white/10 p-2 rounded-full hover:bg-[#2A2AE1] transition"
-                >
-                  <Youtube className="w-5 h-5" />
                 </a>
               </div>
             </div>

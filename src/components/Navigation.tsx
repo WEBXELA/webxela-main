@@ -18,37 +18,37 @@ import {
   Settings
 } from 'lucide-react';
 
-const menuItems = [
-  { title: "Home", path: "/" },
-  {
-    title: "Solutions",
-    path: "/solutions",
-    items: [
-      { name: "AI Solutions", icon: Brain, color: "#6366F1", description: "Transform your business with AI and ML solutions", path: "/solutions/ai" },
-      { name: "SaaS Development", icon: Cloud, color: "#8B5CF6", description: "Build scalable cloud-native applications", path: "/solutions/saas" },
-      { name: "Cloud Services", icon: Server, color: "#EC4899", description: "Modernize your infrastructure with cloud solutions", path: "/solutions/cloud" },
-      { name: "DevOps Excellence", icon: Workflow, color: "#10B981", description: "Streamline development and deployment", path: "/solutions/devops" },
-      { name: "Web Development", icon: Code, color: "#F59E0B", description: "Create stunning web applications", path: "/solutions/web" },
-      { name: "App Development", icon: Smartphone, color: "#3B82F6", description: "Develop native and cross-platform apps", path: "/solutions/app" },
-      { name: "Security Solutions", icon: Shield, color: "#2A2AE1", description: "Protect your digital assets", path: "/solutions/security" },
-      { name: "Identity & Access", icon: Key, color: "#4747E5", description: "Secure authentication and authorization", path: "/solutions/identity" },
-      { name: "System Integration", icon: Settings, color: "#6B6BFF", description: "Connect and optimize your systems", path: "/solutions/integration" }
-    ]
-  },
-  { title: "About", path: "/about" },
-  { 
-    title: "Careers",
-    path: "https://careers.webxela.com",
-    external: true
-  },
-  { title: "Contact", path: "/contact" }
-];
-
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [mobileSubmenuOpen, setMobileSubmenuOpen] = useState(false);
   const location = useLocation();
+
+  const menuItems = [
+    { title: "Home", path: "/" },
+    {
+      title: "Solutions",
+      path: "/solutions",
+      items: [
+        { name: "AI Solutions", icon: Brain, color: "#6366F1", description: "Transform your business with AI and ML solutions", path: "/solutions/ai" },
+        { name: "SaaS Development", icon: Cloud, color: "#8B5CF6", description: "Build scalable cloud-native applications", path: "/solutions/saas" },
+        { name: "Cloud Services", icon: Server, color: "#EC4899", description: "Modernize your infrastructure with cloud solutions", path: "/solutions/cloud" },
+        { name: "DevOps Excellence", icon: Workflow, color: "#10B981", description: "Streamline development and deployment", path: "/solutions/devops" },
+        { name: "Web Development", icon: Code, color: "#F59E0B", description: "Create stunning web applications", path: "/solutions/web" },
+        { name: "App Development", icon: Smartphone, color: "#3B82F6", description: "Develop native and cross-platform apps", path: "/solutions/app" },
+        { name: "Security Solutions", icon: Shield, color: "#2A2AE1", description: "Protect your digital assets", path: "/solutions/security" },
+        { name: "Identity & Access", icon: Key, color: "#4747E5", description: "Secure authentication and authorization", path: "/solutions/identity" },
+        { name: "System Integration", icon: Settings, color: "#6B6BFF", description: "Connect and optimize your systems", path: "/solutions/integration" }
+      ]
+    },
+    { title: "About", path: "/about" },
+    { 
+      title: "Careers",
+      path: "https://careers.webxela.com",
+      external: true
+    },
+    { title: "Contact", path: "/contact" }
+  ];
 
   const menuVariants = {
     closed: {
