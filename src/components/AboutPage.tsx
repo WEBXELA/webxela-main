@@ -182,7 +182,7 @@ const AboutPage = () => {
 
               </p>
               <p className="text-gray-600 mb-6 text-lg leading-relaxed">
-              From product development to launch and beyond, we simplify complex technology so you can focus on what matters most: building, testing, and scaling your startup. Think of WEBXELA not just as a vendor—but your technology partner from day one.
+              From product development to launch and beyond, we simplify complex technology so you can focus on what matters most: building, testing, and scaling your startup. Think of WEBXELA not just as a vendor—but your success partner from day one.
               </p>
               <div className="space-y-4">
                 {achievements.map((achievement, index) => (
