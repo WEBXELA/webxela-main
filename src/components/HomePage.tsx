@@ -663,9 +663,12 @@ function HomePage() {
           >
             <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Business?</h2>
             <p className="text-xl mb-8 text-gray-600">Let's discuss how WEBXELA can help you achieve your goals</p>
-            <button className="bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition">
+            <Link
+              to="/contact"
+              className="bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition"
+            >
               Contact Us Today
-            </button>
+            </Link>
           </motion.div>
         </div>
       </section>
