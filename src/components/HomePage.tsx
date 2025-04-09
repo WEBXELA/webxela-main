@@ -525,7 +525,7 @@ function HomePage() {
             className="text-center mt-20"
           >
             <button className="bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition flex items-center justify-center gap-2 mx-auto group">
-              Join our community
+              Join our team
               <ChevronRight className="group-hover:translate-x-1 transition-transform" />
             </button>
           </motion.div>
