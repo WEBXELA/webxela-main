@@ -109,20 +109,28 @@ const AboutPage = () => {
               dreamers, and problem-solvers dedicated to transforming businesses through 
               cutting-edge technology solutions.
             </p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="flex flex-col sm:flex-row justify-center gap-4"
-            >
-              <button className="bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition flex items-center justify-center gap-2 group">
-                Learn More
-                <ChevronRight className="group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button className="bg-white text-blue-600 px-8 py-4 rounded-full hover:bg-gray-50 transition border-2 border-blue-600">
-                Contact Us
-              </button>
-            </motion.div>
+                        <motion.div
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: 0.3 }}
+                          className="flex flex-col sm:flex-row justify-center gap-4"
+                        >
+                          <Link
+                            to="/contact"
+                            className="bg-[#2A2AE1] text-white px-8 py-4 rounded-full hover:bg-[#2424B8] transition flex items-center justify-center gap-2 group"
+                          >
+                            Contact Us
+                            <ChevronRight className="group-hover:translate-x-1 transition-transform" />
+                          </Link>
+                          <a
+                            href="https://calendly.com/webxela/demo"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-white text-[#2A2AE1] px-8 py-4 rounded-full hover:bg-gray-50 transition border-2 border-[#2A2AE1]"
+                          >
+                            Book a Demo
+                          </a>
+                        </motion.div>
           </motion.div>
         </div>
       </section>
