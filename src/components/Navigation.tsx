@@ -139,7 +139,7 @@ const Navigation = () => {
                     )}
                   </div>
                 ))}
-                <button className="bg-[#2A2AE1] text-white px-6 py-2 rounded-full hover:bg-[#2424B8] transition-all duration-300 flex items-center gap-2 group">
+                <button className="bg-[#2A2AE1] text-white px-6 py-2 rounded-full hover:bg-[#2424B8] transition-all duration-300 flex items-center gap-2 group" onClick={() => window.open('https://calendly.com/webxela/demo')}>
                   Get Started
                   <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -319,7 +319,7 @@ const Navigation = () => {
                   transition={{ delay: menuItems.length * 0.1 }}
                   className="mt-12"
                 >
-                  <button className="w-full bg-[#2A2AE1] text-white py-4 rounded-xl text-lg font-semibold hover:bg-[#2424B8] transition-colors flex items-center justify-center gap-2 group">
+                  <button className="w-full bg-[#2A2AE1] text-white py-4 rounded-xl text-lg font-semibold hover:bg-[#2424B8] transition-colors flex items-center justify-center gap-2 group" onClick={() => window.open('https://calendly.com/webxela/demo')}>
                     Get Started
                     <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </button>

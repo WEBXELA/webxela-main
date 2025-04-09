@@ -124,10 +124,13 @@ const AISolutionsPage = () => {
               transition={{ delay: 0.3 }}
               className="flex flex-col sm:flex-row justify-center gap-4"
             >
-              <button className="bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition flex items-center justify-center gap-2 group">
-                Get Started
-                <ChevronRight className="group-hover:translate-x-1 transition-transform" />
-              </button>
+              <button
+  className="bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition flex items-center justify-center gap-2 group"
+  onClick={() => window.open('https://calendly.com/webxela/demo')}
+>
+  Get Started
+  <ChevronRight className="group-hover:translate-x-1 transition-transform" />
+</button>
               <button className="bg-white text-blue-600 px-8 py-4 rounded-full hover:bg-gray-50 transition border-2 border-blue-600">
                 Schedule Demo
               </button>

@@ -177,7 +177,7 @@ const SystemIntegrationPage = () => {
               transition={{ delay: 0.3 }}
               className="flex flex-col sm:flex-row justify-center gap-4"
             >
-              <button className="bg-[#2A2AE1] text-white px-8 py-4 rounded-full hover:bg-[#2424B8] transition flex items-center justify-center gap-2 group">
+              <button className="bg-[#2A2AE1] text-white px-8 py-4 rounded-full hover:bg-[#2424B8] transition flex items-center justify-center gap-2 group" onClick={() => window.open('https://calendly.com/webxela/demo')}>
                 Get Started
                 <ChevronRight className="group-hover:translate-x-1 transition-transform" />
               </button>
